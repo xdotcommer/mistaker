@@ -14,7 +14,7 @@ module Mistaker
   ONE_DIGIT_UP, ONE_DIGIT_DOWN, NUMERIC_KEY_PAD, DIGIT_SHIFT, MISREAD, KEY_SWAP = (0..NUMBER_MAX).to_a
   MONTH_DAY_SWAP, ONE_DECADE_DOWN, Y2K = ((NUMBER_MAX + 1)..DATE_MAX).to_a
 
-  DROPPED_LETTER, DOUBLE_LETTER, MISREAD_LETTER, MISTYPED_LETTER, PLURALIZATION, VOWEL_REPLACEMENT, CONSONANT_REPLACEMENT = (0..NAME_MAX).to_a
+  DROPPED_LETTER, DOUBLE_LETTER, MISREAD_LETTER, MISTYPED_LETTER, EXTRA_LETTER, VOWEL_REPLACEMENT, CONSONANT_REPLACEMENT = (0..NAME_MAX).to_a
 
   MISREAD_NUMBERS = {
     '0' => '8',
@@ -55,7 +55,8 @@ module Mistaker
     'W' => 'W',
     'X' => 'K',
     'Y' => 'T',
-    'Z' => 'S'
+    'Z' => 'S',
+    ' ' => ' '
   }.freeze
 
   MISTYPED_LETTERS = {
@@ -84,7 +85,8 @@ module Mistaker
     'W' => 'Q',
     'X' => 'C',
     'Y' => 'U',
-    'Z' => 'X'
+    'Z' => 'X',
+    ' ' => ' '
   }.freeze
 
   TEN_KEYS = {
@@ -126,6 +128,37 @@ module Mistaker
     'V' => 'F',
     'W' => 'WH',
     'X' => 'CKS',
-    'Z' => 'D'
+    'Z' => 'D',
+    ' ' => ' '
+  }.freeze
+
+  EXTRA_LETTERS = {
+    'A' => 'E',
+    'B' => 'S',
+    'C' => 'E',
+    'D' => 'T',
+    'E' => 'S',
+    'F' => 'E',
+    'G' => 'UE',
+    'H' => 'S',
+    'I' => 'E',
+    'J' => 'S',
+    'K' => 'S',
+    'L' => 'L',
+    'M' => 'N',
+    'N' => 'E',
+    'O' => 'T',
+    'P' => 'H',
+    'Q' => 'UE',
+    'R' => 'E',
+    'S' => 'S',
+    'T' => 'T',
+    'U' => 'E',
+    'V' => 'E',
+    'W' => 'E',
+    'X' => 'E',
+    'Y' => 'S',
+    'Z' => 'E',
+    ' ' => ''
   }.freeze
 end

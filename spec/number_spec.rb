@@ -2,8 +2,6 @@ RSpec.describe Mistaker::Number do
   describe "#mistake" do
     context 'by default, with no arguments' do
       it 'should randomly select a transformation to apply' do
-        expect(Mistaker::Number.new('198012').mistake).not_to eq('1198012')
-        expect(Mistaker::Number.new('19960607').mistake).not_to eq('19960607')
         expect(Mistaker::Number.new('2018122').mistake).not_to eq('2018122')
       end
     end

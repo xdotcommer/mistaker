@@ -19,8 +19,8 @@ module Mistaker
         @str[index] = MISREAD_LETTERS[@str[index]]
       when MISTYPED_LETTER
         @str[index] = MISTYPED_LETTERS[@str[index]]
-      when PLURALIZATION
-        @str << 'S'
+      when EXTRA_LETTER
+        @str << EXTRA_LETTERS[@str[@length - 1]]
       when MISHEARD_LETTERS
         @str = "#{ @str.slice(0...index) }#{ MISHEARD_LETTERS[@str[index]] }#{ @str.slice((index+1)..@length) }"
       end
