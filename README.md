@@ -21,6 +21,11 @@ Or install it yourself as:
 ## Usage
 
 ```ruby
+Mistaker::Word.mistake "GRATEFUL"  #=> "GRATEFU"
+Mistaker::Word.mistake "GRATEFUL"  #=> "GRATAFUL"
+Mistaker::Word.mistake "GRATEFUL"  #=> "GRAEFUL"
+Mistaker::Word.mistake "GRATEFUL"  #=> "GRATEFULL"
+
 Mistaker::Name.mistake "KIM DEAL"   #=> "KIM FEAL"
 Mistaker::Name.mistake "KIM DEAL"   #=> "KIM DEL"
 Mistaker::Name.mistake "KIM DEAL"   #=> "KIM DEALL"

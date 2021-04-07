@@ -2,6 +2,7 @@ require "mistaker/version"
 require "mistaker/base"
 require "mistaker/date"
 require "mistaker/number"
+require "mistaker/word"
 require "mistaker/name"
 
 module Mistaker
@@ -9,12 +10,12 @@ module Mistaker
 
   NUMBER_MAX = 5
   DATE_MAX = 8
-  NAME_MAX = 7
+  NAME_MAX = 6
 
   ONE_DIGIT_UP, ONE_DIGIT_DOWN, NUMERIC_KEY_PAD, DIGIT_SHIFT, MISREAD, KEY_SWAP = (0..NUMBER_MAX).to_a
   MONTH_DAY_SWAP, ONE_DECADE_DOWN, Y2K = ((NUMBER_MAX + 1)..DATE_MAX).to_a
 
-  DROPPED_LETTER, DOUBLE_LETTER, MISREAD_LETTER, MISTYPED_LETTER, EXTRA_LETTER, VOWEL_REPLACEMENT, CONSONANT_REPLACEMENT = (0..NAME_MAX).to_a
+  DROPPED_LETTER, DOUBLE_LETTER, MISREAD_LETTER, MISTYPED_LETTER, EXTRA_LETTER, MISHEARD_LETTER = (0..NAME_MAX).to_a
 
   MISREAD_NUMBERS = {
     '0' => '8',
